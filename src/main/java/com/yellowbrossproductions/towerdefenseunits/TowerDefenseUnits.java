@@ -2,10 +2,7 @@ package com.yellowbrossproductions.towerdefenseunits;
 
 import com.mojang.logging.LogUtils;
 import com.yellowbrossproductions.towerdefenseunits.config.Config;
-import com.yellowbrossproductions.towerdefenseunits.init.TDUEffects;
-import com.yellowbrossproductions.towerdefenseunits.init.TDUItemsAndBlocks;
-import com.yellowbrossproductions.towerdefenseunits.init.TDUSoundEvents;
-import com.yellowbrossproductions.towerdefenseunits.init.TDUVillagerProfessions;
+import com.yellowbrossproductions.towerdefenseunits.init.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -22,6 +19,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
+import java.util.Locale;
+
 @Mod(TowerDefenseUnits.MOD_ID)
 public class TowerDefenseUnits {
     public static final String MOD_ID = "towerdefenseunits";
@@ -32,10 +31,11 @@ public class TowerDefenseUnits {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> TDU_GROUP = CREATIVE_MODE_TABS.register("towerdefenseunitstab", () -> CreativeModeTab.builder()
-            .icon(() -> TDUItemsAndBlocks.UNIT_STATION_ITEM.get().getDefaultInstance())
+            .icon(() -> TDUItemsAndBlocks.TURRET.get().getDefaultInstance())
             .title(Component.translatable("itemGroup.towerdefenseunitstab"))
             .displayItems((parameters, output) -> {
                 output.accept(TDUItemsAndBlocks.UNIT_STATION_ITEM.get());
+                output.accept(TDUItemsAndBlocks.TURRET.get());
             })
             .build());
 
@@ -45,6 +45,7 @@ public class TowerDefenseUnits {
 
         TDUItemsAndBlocks.ITEMS.register(modEventBus);
         TDUItemsAndBlocks.BLOCKS.register(modEventBus);
+        TDUEntityTypes.ENTITY_TYPES.register(modEventBus);
         TDUEffects.EFFECTS.register(modEventBus);
         TDUSoundEvents.SOUND_EVENTS.register(modEventBus);
         TDUVillagerProfessions.DEFERRED_REGISTER_POI.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -57,5 +58,9 @@ public class TowerDefenseUnits {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    public static ResourceLocation prefix(String name) {
+        return new ResourceLocation(MOD_ID, name.toLowerCase(Locale.ROOT));
     }
 }

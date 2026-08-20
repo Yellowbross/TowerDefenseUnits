@@ -13,6 +13,13 @@
     ]
   },
 
+  "ultra": {
+    "subtitle": "subtitles.ultra",
+    "sounds": [
+      "towerdefenseunits:ultra"
+    ]
+  },
+
   "item.aggro_whistle.blown": {
     "subtitle": "subtitles.item.aggro_whistle.blown",
     "sounds": [

@@ -1,6 +1,7 @@
 package com.yellowbrossproductions.towerdefenseunits.init;
 
 import com.yellowbrossproductions.towerdefenseunits.TowerDefenseUnits;
+import com.yellowbrossproductions.towerdefenseunits.item.UnitItemBase;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,6 +15,9 @@ import net.minecraftforge.registries.RegistryObject;
 public class TDUItemsAndBlocks {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TowerDefenseUnits.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TowerDefenseUnits.MOD_ID);
+
+    // Units
+    public static final RegistryObject<Item> TURRET = ITEMS.register("turret", () -> new UnitItemBase("turret"));
 
     // Blocks
     public static final RegistryObject<Block> UNIT_STATION = BLOCKS.register("unit_station",

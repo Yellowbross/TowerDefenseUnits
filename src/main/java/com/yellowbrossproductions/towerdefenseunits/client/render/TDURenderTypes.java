@@ -20,12 +20,13 @@ public abstract class TDURenderTypes extends RenderType {
 
     private static final BiFunction<ResourceLocation, Boolean, RenderType> TWO_DIMENSIONAL_EFFECTS = Util.memoize((resourceLocation, compositeState) -> {
         CompositeState rendertype$compositestate = CompositeState.builder()
-                .setShaderState(RenderStateShard.RENDERTYPE_EYES_SHADER)
+                .setShaderState(RenderStateShard.RENDERTYPE_ENTITY_TRANSLUCENT_EMISSIVE_SHADER)
                 .setTextureState(new TextureStateShard(resourceLocation, false, false))
-                .setTransparencyState(RenderStateShard.TRANSLUCENT_TRANSPARENCY)
+                .setTransparencyState(RenderStateShard.LIGHTNING_TRANSPARENCY)
                 .setCullState(RenderStateShard.NO_CULL)
                 .setWriteMaskState(RenderStateShard.COLOR_DEPTH_WRITE)
                 .setDepthTestState(RenderStateShard.LEQUAL_DEPTH_TEST)
+                .setLightmapState(RenderStateShard.NO_LIGHTMAP)
                 .createCompositeState(compositeState);
         return create("twoDimensionalEffects", DefaultVertexFormat.NEW_ENTITY, VertexFormat.Mode.QUADS, 256, true, true, rendertype$compositestate);
     });

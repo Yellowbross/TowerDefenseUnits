@@ -12,6 +12,7 @@ public class TDUSoundEvents {
 
     public static final RegistryObject<SoundEvent> HUGE_EXPLOSION = addSoundsToRegistry("huge_explosion");
     public static final RegistryObject<SoundEvent> CHILLED = addSoundsToRegistry("chilled");
+    public static final RegistryObject<SoundEvent> ULTRA = addSoundsToRegistry("ultra");
 
     public static final RegistryObject<SoundEvent> AGGRO_WHISTLE_BLOWN = addSoundsToRegistry("item.aggro_whistle.blown");
 
