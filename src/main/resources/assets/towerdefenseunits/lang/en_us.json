@@ -15,6 +15,8 @@
   "item.towerdefenseunits.mend": "Mend",
   "item.towerdefenseunits.catcher": "Catcher",
 
+  "block.towerdefenseunits.unit_station": "Unit Station",
+
   "entity.towerdefenseunits.angerer": "Angerer",
   "entity.towerdefenseunits.turret": "Turret",
   "entity.towerdefenseunits.sniping_turret": "Sniping Turret",
@@ -36,8 +38,7 @@
   "entity.towerdefenseunits.reinforced_creeper": "Reinforced Creeper",
 
   "entity.towerdefenseunits.fire_cloud": "Fire Cloud",
-
-  "entity.towerdefenseunits.forcefield": "Forcefield",
+  "entity.minecraft.villager.towerdefenseunits.unitologist": "Unitologist",
 
   "tooltip.towerdefenseunits.unit_remover": "§6Click on a unit to remove it",
   "tooltip.towerdefenseunits.unit_spawner": "§6Set up fun defenses quick! With any unit in your offhand, throw this item to spawn a bunch of the unit at once",

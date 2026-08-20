@@ -8,6 +8,8 @@
     "common.LivingEntityMixin"
   ],
   "client": [
+    "client.EntityRendererMixin",
+    "client.LivingEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
