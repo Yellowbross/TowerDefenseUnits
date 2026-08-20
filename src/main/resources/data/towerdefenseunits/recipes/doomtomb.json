@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BSB",
+    " B ",
+    "CCC"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "S": {
+      "item": "minecraft:bone_block"
+    },
+    "C": {
+      "item": "minecraft:coarse_dirt"
+    }
+  },
+  "result": {
+    "count": 4,
+    "item": "towerdefenseunits:doomtomb"
+  }
+}

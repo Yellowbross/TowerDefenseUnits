@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "towerdefenseunits:reinforced_skeleton",
+    "towerdefenseunits:reinforced_zombie",
+    "towerdefenseunits:reinforced_skelemage",
+    "towerdefenseunits:reinforced_zombmage",
+    "towerdefenseunits:reinforced_giant",
+    "towerdefenseunits:reinforced_creeper"
+  ]
+}

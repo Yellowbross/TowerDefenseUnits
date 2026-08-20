@@ -1,0 +1,148 @@
+{
+  "item.towerdefenseunits.aggro_whistle": "Aggro Whistle",
+  "item.towerdefenseunits.unit_remover": "Unit Remover",
+  "item.towerdefenseunits.unit_spawner": "Unit Spawner",
+
+  "item.towerdefenseunits.angerer": "Angerer",
+  "item.towerdefenseunits.turret": "Turret",
+  "item.towerdefenseunits.sniping_turret": "Sniping Turret",
+  "item.towerdefenseunits.plaguing_turret": "Plaguing Turret",
+  "item.towerdefenseunits.freezing_turret": "Freezing Turret",
+  "item.towerdefenseunits.flaming_turret": "Flaming Turret",
+  "item.towerdefenseunits.catadynamite": "Cata-Dynamite",
+  "item.towerdefenseunits.doomtomb": "Doom-Tomb",
+  "item.towerdefenseunits.slowdown": "Slowdown",
+  "item.towerdefenseunits.mend": "Mend",
+  "item.towerdefenseunits.catcher": "Catcher",
+
+  "entity.towerdefenseunits.angerer": "Angerer",
+  "entity.towerdefenseunits.turret": "Turret",
+  "entity.towerdefenseunits.sniping_turret": "Sniping Turret",
+  "entity.towerdefenseunits.plaguing_turret": "Plaguing Turret (WIP)",
+  "entity.towerdefenseunits.freezing_turret": "Freezing Turret",
+  "entity.towerdefenseunits.flaming_turret": "Flaming Turret",
+  "entity.towerdefenseunits.catadynamite": "Cata-Dynamite",
+  "entity.towerdefenseunits.dynamite": "Dynamite",
+  "entity.towerdefenseunits.doom_tomb": "Doom-Tomb",
+  "entity.towerdefenseunits.slowdown": "Slowdown",
+  "entity.towerdefenseunits.mend": "Mend",
+  "entity.towerdefenseunits.catcher": "Catcher",
+
+  "entity.towerdefenseunits.reinforced_skeleton": "Reinforced Skeleton",
+  "entity.towerdefenseunits.reinforced_skelemage": "Reinforced Skele-Mage",
+  "entity.towerdefenseunits.reinforced_zombie": "Reinforced Zombie",
+  "entity.towerdefenseunits.reinforced_zombmage": "Reinforced Zomb-Mage",
+  "entity.towerdefenseunits.reinforced_giant": "Reinforced Giant",
+  "entity.towerdefenseunits.reinforced_creeper": "Reinforced Creeper",
+
+  "entity.towerdefenseunits.fire_cloud": "Fire Cloud",
+
+  "entity.towerdefenseunits.forcefield": "Forcefield",
+
+  "tooltip.towerdefenseunits.unit_remover": "§6Click on a unit to remove it",
+  "tooltip.towerdefenseunits.unit_spawner": "§6Set up fun defenses quick! With any unit in your offhand, throw this item to spawn a bunch of the unit at once",
+  "tooltip.towerdefenseunits.unit_spawner2": "§6Sneak-right-click to cycle through desired grid size",
+
+  "tooltip.towerdefenseunits.nocturnal_warning": "§cNocturnal - Only works at night",
+  "tooltip.towerdefenseunits.helpless_warning": "§cHelpless - Can't kill mobs on its own",
+  "tooltip.towerdefenseunits.claustrophobic_warning": "§cClaustrophobic - Requires open space",
+
+  "tooltip.towerdefenseunits.feedable_hint": "§dFeedable - This unit can be buffed further",
+
+  "tooltip.towerdefenseunits.shift": "Hold §eShift §7for more information",
+  "tooltip.towerdefenseunits.feedable_tippedarrows_hint": "§7Can be fed Tipped Arrows to inflict potion effects.",
+  "tooltip.towerdefenseunits.feedable_flintsteel_hint": "§7Can be fed Flint & Steel to burn mobs.",
+  "tooltip.towerdefenseunits.feedable_powdersnow_hint": "§7Can be fed Powder Snow to freeze mobs.",
+
+  "tooltip.towerdefenseunits.angerer_hint": "§7Diverts mobs to itself",
+  "tooltip.towerdefenseunits.angerer_shield_hint": "§7Sneak-right-click w/ shield to protect",
+  "tooltip.towerdefenseunits.angerer_ultimate_hint": "§eUltimate: Creates a forcefield around itself, protecting everything inside",
+
+  "tooltip.towerdefenseunits.turret_hint": "§7Shoots arrows quickly at mobs",
+  "tooltip.towerdefenseunits.turret_ultimate_hint": "§eUltimate: Rains exploding arrows from the sky",
+
+  "tooltip.towerdefenseunits.sniping_turret_hint": "§7Slowly snipes mobs from far away",
+  "tooltip.towerdefenseunits.sniping_turret_distance_hint": "§7Can target mobs up to 60 blocks away.",
+  "tooltip.towerdefenseunits.sniping_turret_ultimate_hint": "§eUltimate: Fires five lasers, which can instakill most mobs",
+
+  "tooltip.towerdefenseunits.plaguing_turret_hint": "§7Weak on its own, but multiplies with each kill",
+  "tooltip.towerdefenseunits.plaguing_turret_dye_hint": "§7Can be dyed to change its color.",
+  "tooltip.towerdefenseunits.plaguing_turret_ultimate_hint": "§eUltimate: Sprays an avalanche of slime, instantly turning any mob into a clone",
+
+  "tooltip.towerdefenseunits.freezing_turret_hint": "§7Shoots frozen arrows that chill mobs",
+  "tooltip.towerdefenseunits.freezing_turret_ultimate_hint": "§eUltimate: Creates a blizzard that freezes all mobs across the map",
+
+  "tooltip.towerdefenseunits.flaming_turret_hint": "§7Close-range unit that sprays fire to burn mobs",
+  "tooltip.towerdefenseunits.flaming_turret_ultimate_hint": "§eUltimate: Permanently upgrades to Soul Fire, which deals twice as much damage",
+
+  "tooltip.towerdefenseunits.webbing_turret_hint": "§7Shoots cobweb at mobs to slow them",
+
+  "tooltip.towerdefenseunits.catadynamite_hint": "§7Lobs dynamite which deals splash damage",
+  "tooltip.towerdefenseunits.catadynamite_ultimate_hint": "§eUltimate: Launches a cluster of TNT, blowing everything nearby up",
+  "tooltip.towerdefenseunits.catadynamite_claustrophobic_warning": "§7The Cata-Dynamite's projectiles work in arcs, which must not be obstructed.",
+
+  "tooltip.towerdefenseunits.slowdown_hint": "§7Slows down multiple mobs at a time",
+
+  "tooltip.towerdefenseunits.doomtomb_hint": "§7Summons friendly undeads to help fight",
+  "tooltip.towerdefenseunits.doomtomb_nocturnal_warning": "§7The Doom-Tomb only works during nighttime or thunderstorms, as the undead burn during the day.",
+  "tooltip.towerdefenseunits.doomtomb_feedable_hint": "§7Can be fed Lapis Lazuli to occasionally spawn Mages.",
+  "tooltip.towerdefenseunits.doomtomb_ultimate_hint": "§eUltimate: Calls all other Doom-Tombs to forcibly spawn an Undead, then spawns a Reinforced Giant",
+
+  "tooltip.towerdefenseunits.mend_hint": "§7Idly heals other units over time",
+  "tooltip.towerdefenseunits.mend_ultimate_hint": "§eUltimate: Permanently begins healing nearby units twice as fast",
+
+  "tooltip.towerdefenseunits.lend_hint": "§7Fuels other units with mob deaths",
+
+  "tooltip.towerdefenseunits.tend_hint": "§7Alerts you when a swarm is breaching your defenses",
+
+  "tooltip.towerdefenseunits.catcher_hint": "§7Catches and incinerates small mobs",
+  "tooltip.towerdefenseunits.catcher_ultimate_hint": "§eUltimate: Sucks up and devours all the smaller mobs in a huge radius",
+
+  "subtitles.huge_explosion": "Huge explosion",
+  "subtitles.chilled": "Mob chilled",
+
+  "subtitles.item.aggro_whistle.blown": "Aggro Whistle blown",
+
+  "subtitles.entity.forcefield.idle": "Forcefield hums",
+  "subtitles.entity.forcefield.damage": "Forcefield damaged",
+  "subtitles.entity.forcefield.explode": "Forcefield explodes",
+
+  "subtitles.entity.catadynamite.prepare_ultra": "Cata-Dynamite prepares ultimate",
+  "subtitles.entity.catadynamite.shoot": "Cata-Dynamite shoots TNT",
+
+  "subtitles.entity.reinforced_skeleton.idle": "Reinforced Skeleton rattles",
+  "subtitles.entity.reinforced_skeleton.hurt": "Reinforced Skeleton hurts",
+  "subtitles.entity.reinforced_skeleton.death": "Reinforced Skeleton dies",
+
+  "subtitles.entity.reinforced_zombie.idle": "Reinforced Zombie groans",
+  "subtitles.entity.reinforced_zombie.hurt": "Reinforced Zombie hurts",
+  "subtitles.entity.reinforced_zombie.death": "Reinforced Zombie dies",
+
+  "subtitles.entity.reinforced_giant.idle": "Reinforced Giant groans",
+  "subtitles.entity.reinforced_giant.hurt": "Reinforced Giant hurts",
+  "subtitles.entity.reinforced_giant.death": "Reinforced Giant dies",
+
+  "subtitles.entity.reinforced_skelemage.idle": "Reinforced Skele-Mage rattles",
+  "subtitles.entity.reinforced_skelemage.hurt": "Reinforced Skele-Mage hurts",
+  "subtitles.entity.reinforced_skelemage.death": "Reinforced Skele-Mage dies",
+  "subtitles.entity.reinforced_skelemage.prepare_spell": "Reinforced Skele-Mage prepares",
+  "subtitles.entity.reinforced_skelemage.cast_spell": "Reinforced Skele-Mage spells",
+
+  "subtitles.entity.reinforced_zombmage.idle": "Reinforced Zomb-Mage groans",
+  "subtitles.entity.reinforced_zombmage.hurt": "Reinforced Zomb-Mage hurts",
+  "subtitles.entity.reinforced_zombmage.death": "Reinforced Zomb-Mage dies",
+  "subtitles.entity.reinforced_zombmage.prepare_spell": "Reinforced Zomb-Mage prepares",
+
+  "subtitles.entity.reinforced_creeper.hurt": "Reinforced Creeper hurts",
+  "subtitles.entity.reinforced_creeper.death": "Reinforced Creeper dies",
+  "subtitles.entity.reinforced_creeper.primed": "Reinforced Creeper hisses",
+
+  "effect.towerdefenseunits.shielded": "Shielded",
+  "effect.towerdefenseunits.hypnotized": "Hypnotized",
+  "effect.towerdefenseunits.chilled": "Chilled",
+  "effect.towerdefenseunits.spicy": "Spicy",
+
+  "actionbar.towerdefenseunits.whistle_hint": "Look directly at a mob first",
+
+  "itemGroup.towerdefenseunitstab": "Tower Defense Units"
+}

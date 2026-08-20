@@ -1,0 +1,237 @@
+{
+  "huge_explosion": {
+    "subtitle": "subtitles.huge_explosion",
+    "sounds": [
+      "towerdefenseunits:huge_explosion"
+    ]
+  },
+
+  "chilled": {
+    "subtitle": "subtitles.chilled",
+    "sounds": [
+      "towerdefenseunits:freeze"
+    ]
+  },
+
+  "item.aggro_whistle.blown": {
+    "subtitle": "subtitles.item.aggro_whistle.blown",
+    "sounds": [
+      "towerdefenseunits:aggro_whistle"
+    ]
+  },
+
+  "entity.forcefield.idle": {
+    "subtitle": "subtitles.entity.forcefield.idle",
+    "sounds": [
+      "towerdefenseunits:forcefield/idle"
+    ]
+  },
+  "entity.forcefield.damage": {
+    "subtitle": "subtitles.entity.forcefield.damage",
+    "sounds": [
+      "towerdefenseunits:forcefield/damage"
+    ]
+  },
+  "entity.forcefield.explode": {
+    "subtitle": "subtitles.entity.forcefield.explode",
+    "sounds": [
+      "towerdefenseunits:forcefield/explode"
+    ]
+  },
+
+  "entity.catadynamite.prepare_ultra": {
+    "subtitle": "subtitles.entity.catadynamite.prepare_ultra",
+    "sounds": [
+      "towerdefenseunits:catadynamite/prepare_ultra"
+    ]
+  },
+  "entity.catadynamite.shoot": {
+    "subtitle": "subtitles.entity.catadynamite.shoot",
+    "sounds": [
+      "towerdefenseunits:catadynamite/shoot"
+    ]
+  },
+
+  "entity.reinforced_skeleton.idle": {
+    "subtitle": "subtitles.entity.reinforced_skeleton.idle",
+    "sounds": [
+      {
+        "name": "entity.skeleton.ambient",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.reinforced_skeleton.hurt": {
+    "subtitle": "subtitles.entity.reinforced_skeleton.hurt",
+    "sounds": [
+      {
+        "name": "entity.skeleton.hurt",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.reinforced_skeleton.death": {
+    "subtitle": "subtitles.entity.reinforced_skeleton.death",
+    "sounds": [
+      {
+        "name": "entity.skeleton.death",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.reinforced_zombie.idle": {
+    "subtitle": "subtitles.entity.reinforced_zombie.idle",
+    "sounds": [
+      {
+        "name": "entity.zombie.ambient",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.reinforced_zombie.hurt": {
+    "subtitle": "subtitles.entity.reinforced_zombie.hurt",
+    "sounds": [
+      {
+        "name": "entity.zombie.hurt",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.reinforced_zombie.death": {
+    "subtitle": "subtitles.entity.reinforced_zombie.death",
+    "sounds": [
+      {
+        "name": "entity.zombie.death",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.reinforced_giant.idle": {
+    "subtitle": "subtitles.entity.reinforced_giant.idle",
+    "sounds": [
+      {
+        "name": "entity.zombie.ambient",
+        "type": "event",
+        "pitch": 0.7
+      }
+    ]
+  },
+  "entity.reinforced_giant.hurt": {
+    "subtitle": "subtitles.entity.reinforced_giant.hurt",
+    "sounds": [
+      {
+        "name": "entity.zombie.hurt",
+        "type": "event",
+        "pitch": 0.7
+      }
+    ]
+  },
+  "entity.reinforced_giant.death": {
+    "subtitle": "subtitles.entity.reinforced_giant.death",
+    "sounds": [
+      {
+        "name": "entity.zombie.death",
+        "type": "event",
+        "pitch": 0.7
+      }
+    ]
+  },
+  "entity.reinforced_skelemage.idle": {
+    "subtitle": "subtitles.entity.reinforced_skelemage.idle",
+    "sounds": [
+      "towerdefenseunits:mages/skelemage/say1",
+      "towerdefenseunits:mages/skelemage/say2",
+      "towerdefenseunits:mages/skelemage/say3"
+    ]
+  },
+  "entity.reinforced_skelemage.hurt": {
+    "subtitle": "subtitles.entity.reinforced_skelemage.hurt",
+    "sounds": [
+      "towerdefenseunits:mages/skelemage/hurt1",
+      "towerdefenseunits:mages/skelemage/hurt2",
+      "towerdefenseunits:mages/skelemage/hurt3",
+      "towerdefenseunits:mages/skelemage/hurt4"
+    ]
+  },
+  "entity.reinforced_skelemage.death": {
+    "subtitle": "subtitles.entity.reinforced_skelemage.death",
+    "sounds": [
+      "towerdefenseunits:mages/skelemage/death"
+    ]
+  },
+  "entity.reinforced_skelemage.prepare_spell": {
+    "subtitle": "subtitles.entity.reinforced_skelemage.prepare_spell",
+    "sounds": [
+      "towerdefenseunits:mages/skelemage/prepare_spell"
+    ]
+  },
+  "entity.reinforced_skelemage.cast_spell": {
+    "subtitle": "subtitles.entity.reinforced_skelemage.cast_spell",
+    "sounds": [
+      "towerdefenseunits:mages/skelemage/cast"
+    ]
+  },
+  "entity.reinforced_zombmage.idle": {
+    "subtitle": "subtitles.entity.reinforced_zombmage.idle",
+    "sounds": [
+      "towerdefenseunits:mages/zombmage/idle1",
+      "towerdefenseunits:mages/zombmage/idle2",
+      "towerdefenseunits:mages/zombmage/idle3"
+    ]
+  },
+  "entity.reinforced_zombmage.hurt": {
+    "subtitle": "subtitles.entity.reinforced_zombmage.hurt",
+    "sounds": [
+      "towerdefenseunits:mages/zombmage/hurt1",
+      "towerdefenseunits:mages/zombmage/hurt2"
+    ]
+  },
+  "entity.reinforced_zombmage.death": {
+    "subtitle": "subtitles.entity.reinforced_zombmage.death",
+    "sounds": [
+      "towerdefenseunits:mages/zombmage/death"
+    ]
+  },
+  "entity.reinforced_zombmage.prepare_spell": {
+    "subtitle": "subtitles.entity.reinforced_zombmage.prepare_spell",
+    "sounds": [
+      "towerdefenseunits:mages/zombmage/prepare_spell"
+    ]
+  },
+  "entity.reinforced_creeper.hurt": {
+    "subtitle": "subtitles.entity.reinforced_creeper.hurt",
+    "sounds": [
+      {
+        "name": "entity.creeper.hurt",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.reinforced_creeper.death": {
+    "subtitle": "subtitles.entity.reinforced_creeper.death",
+    "sounds": [
+      {
+        "name": "entity.creeper.death",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "entity.reinforced_creeper.primed": {
+    "subtitle": "subtitles.entity.reinforced_creeper.primed",
+    "sounds": [
+      {
+        "name": "entity.creeper.primed",
+        "type": "event",
+        "pitch": 1.0
+      }
+    ]
+  }
+}

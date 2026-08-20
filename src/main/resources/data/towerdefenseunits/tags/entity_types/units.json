@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "towerdefenseunits:angerer",
+    "towerdefenseunits:doom_tomb",
+    "towerdefenseunits:turret",
+    "towerdefenseunits:plaguing_turret",
+    "towerdefenseunits:sniping_turret",
+    "towerdefenseunits:freezing_turret",
+    "towerdefenseunits:catadynamite",
+    "towerdefenseunits:mend",
+    "towerdefenseunits:catcher"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    " FB",
+    " S "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:dispenser"
+    },
+    "F": {
+      "tag": "minecraft:wooden_fences"
+    },
+    "B": {
+      "tag": "minecraft:signs"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "result": {
+    "item": "towerdefenseunits:angerer"
+  }
+}

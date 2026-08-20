@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TC ",
+    "B P",
+    "SP "
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:tnt"
+    },
+    "B": {
+      "item": "minecraft:redstone_block"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone_slab"
+    },
+    "P": {
+      "item": "minecraft:sticky_piston"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    }
+  },
+  "result": {
+    "item": "towerdefenseunits:catadynamite"
+  }
+}

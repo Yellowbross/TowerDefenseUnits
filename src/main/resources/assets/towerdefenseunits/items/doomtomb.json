@@ -1,0 +1,26 @@
+{
+  "model":{
+    "type": "select",
+    "property": "custom_model_data",
+    "fallback": {
+      "type": "model",
+      "model": "towerdefenseunits:item/doomtomb"
+    },
+    "cases": [
+      {
+        "when": "fusion1",
+        "model": {
+          "type": "model",
+          "model": "towerdefenseunits:item/doomtomb_mage"
+        }
+      },
+      {
+        "when": "fusion2",
+        "model": {
+          "type": "model",
+          "model": "towerdefenseunits:item/doomtomb_explosive"
+        }
+      }
+    ]
+  }
+}

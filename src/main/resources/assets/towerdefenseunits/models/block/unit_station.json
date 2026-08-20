@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "towerdefenseunits:placeholder",
+    "north": "towerdefenseunits:placeholder",
+    "west": "towerdefenseunits:placeholder",
+    "south": "towerdefenseunits:placeholder",
+    "east": "towerdefenseunits:placeholder",
+    "up": "towerdefenseunits:placeholder",
+    "down": "towerdefenseunits:placeholder"
+  }
+}

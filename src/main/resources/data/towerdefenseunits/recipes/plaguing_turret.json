@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VSV",
+    "STS",
+    "VSV"
+  ],
+  "key": {
+    "V": {
+      "item": "minecraft:vine"
+    },
+    "T": {
+      "item": "towerdefenseunits:turret"
+    },
+    "S": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "result": {
+    "item": "towerdefenseunits:plaguing_turret"
+  }
+}
