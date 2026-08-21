@@ -3,6 +3,7 @@ package com.yellowbrossproductions.towerdefenseunits.entities.units;
 import com.yellowbrossproductions.towerdefenseunits.entities.AbstractUnit;
 import com.yellowbrossproductions.towerdefenseunits.entities.projectiles.UnitArrow;
 import com.yellowbrossproductions.towerdefenseunits.init.TDUItemsAndBlocks;
+import com.yellowbrossproductions.towerdefenseunits.init.TDUSoundEvents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -61,6 +62,8 @@ public class Turret extends AbstractUnit implements RangedAttackMob {
     }
 
     public void fireProjectile(LivingEntity livingEntity, float v, float inaccuracy) {
+        if (this.level().isClientSide) return;
+
         UnitArrow arrow = new UnitArrow(this.level(), this, this.position().add(0, this.getEyeHeight(), 0));
         double d0 = livingEntity.getX() - this.getX();
         double d1 = livingEntity.getY(0.3333333333333333D) - arrow.getY();
@@ -144,9 +147,20 @@ public class Turret extends AbstractUnit implements RangedAttackMob {
     @Override
     public void tickUltra() {
         super.tickUltra();
+        for (int i = 0; i < 5; i++) {
+            this.playSound(SoundEvents.DISPENSER_LAUNCH, 1.0F, this.getVoicePitch());
+            if (!this.level().isClientSide) {
+                UnitArrow arrow = new UnitArrow(this.level(), this, this.position().add(0, this.getEyeHeight(), 0));
+                arrow.setDeltaMovement(
+                        -1.0D + this.random.nextDouble() + this.random.nextDouble(),
+                        3.0D,
+                        -1.0D + this.random.nextDouble() + this.random.nextDouble());
+                arrow.explosive = true;
+                this.level().addFreshEntity(arrow);
+            }
+        }
         if (this.getUsingUltraTicks() > 100) {
-            this.setFlashTicks(10);
-            this.setUsingUltraTicks(0);
+            this.endUltra();
         }
     }
 }

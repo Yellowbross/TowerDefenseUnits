@@ -20,6 +20,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.fluids.FluidType;
 
+import java.util.List;
 import java.util.function.Predicate;
 
 public class AbstractUnit extends AbstractGolem implements ICanBeAnimated {
@@ -28,8 +29,10 @@ public class AbstractUnit extends AbstractGolem implements ICanBeAnimated {
     protected static final EntityDataAccessor<String> ANIMATION_STATE = SynchedEntityData.defineId(AbstractUnit.class, EntityDataSerializers.STRING);
     private static final EntityDataAccessor<Integer> FUSION_TYPE = SynchedEntityData.defineId(AbstractUnit.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Float> UNIT_DIRECTION = SynchedEntityData.defineId(AbstractUnit.class, EntityDataSerializers.FLOAT);
+    private static final EntityDataAccessor<Boolean> ULTRA_ACTIVATED = SynchedEntityData.defineId(AbstractUnit.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> USING_ULTRA_TICKS = SynchedEntityData.defineId(AbstractUnit.class, EntityDataSerializers.INT);
-    private static final EntityDataAccessor<Integer> FLASH_TICKS = SynchedEntityData.defineId(AbstractUnit.class, EntityDataSerializers.INT);
+    private boolean clientHasSpawned = false;
+    public int clientFlashTicks = 0;
     public boolean isAllowedToMove = false;
 
     public AbstractUnit(EntityType<? extends AbstractGolem> pEntityType, Level pLevel) {
@@ -42,8 +45,8 @@ public class AbstractUnit extends AbstractGolem implements ICanBeAnimated {
         this.entityData.define(ANIMATION_STATE, "none");
         this.entityData.define(FUSION_TYPE, 0);
         this.entityData.define(UNIT_DIRECTION, 0.0F);
+        this.entityData.define(ULTRA_ACTIVATED, false);
         this.entityData.define(USING_ULTRA_TICKS, 0);
-        this.entityData.define(FLASH_TICKS, 0);
     }
 
     @Override
@@ -102,7 +105,10 @@ public class AbstractUnit extends AbstractGolem implements ICanBeAnimated {
         if (!this.isAllowedToMove) this.setDeltaMovement(0.0D, this.getDeltaMovement().y, 0.0D);
 
         if (this.getUsingUltraTicks() > 0) this.tickUltra();
-        this.setFlashTicks(this.getFlashTicks() - 1);
+        if (this.level().isClientSide) {
+            if (this.tickCount == 1) this.clientFlashTicks = 0;
+            else this.clientFlashTicks--;
+        }
 
         super.tick();
 
@@ -156,6 +162,10 @@ public class AbstractUnit extends AbstractGolem implements ICanBeAnimated {
             }
         }
 
+        if (ULTRA_ACTIVATED.equals(pKey)) {
+            this.clientFlashTicks = 15;
+        }
+
         super.onSyncedDataUpdated(pKey);
     }
 
@@ -167,7 +177,7 @@ public class AbstractUnit extends AbstractGolem implements ICanBeAnimated {
     @Override
     protected InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
-        if (itemstack.is(Items.DIAMOND_BLOCK)) {
+        if (itemstack.is(Items.DIAMOND_BLOCK) && !this.isUsingUltra()) {
             pPlayer.swing(pHand);
             this.startUltra();
         }
@@ -182,21 +192,26 @@ public class AbstractUnit extends AbstractGolem implements ICanBeAnimated {
         if (!this.level().isClientSide) this.entityData.set(USING_ULTRA_TICKS, i);
     }
 
-    public int getFlashTicks() {
-        return this.entityData.get(FLASH_TICKS);
+    public boolean isUsingUltra() {
+        return this.entityData.get(ULTRA_ACTIVATED);
     }
 
-    public void setFlashTicks(int i) {
-        if (!this.level().isClientSide) this.entityData.set(FLASH_TICKS, i);
+    public void setUltraActivated(boolean b) {
+        if (!this.level().isClientSide) this.entityData.set(ULTRA_ACTIVATED, b);
     }
 
     public void startUltra() {
         this.playSound(TDUSoundEvents.ULTRA.get(), 2.0F, 1.0F);
-        this.setFlashTicks(15);
         this.setUsingUltraTicks(1);
+        this.setUltraActivated(true);
     }
 
     public void tickUltra() {
         this.setUsingUltraTicks(this.getUsingUltraTicks() + 1);
+    }
+
+    public void endUltra() {
+        this.setUsingUltraTicks(0);
+        this.setUltraActivated(false);
     }
 }

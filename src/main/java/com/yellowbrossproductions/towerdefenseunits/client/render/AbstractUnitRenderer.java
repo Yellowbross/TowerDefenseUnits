@@ -39,7 +39,7 @@ public abstract class AbstractUnitRenderer<T extends AbstractUnit, M extends Ent
         if (ultra > 0) {
             VertexConsumer sprite = pBuffer.getBuffer(TDURenderTypes.twoDimensionalEffects(new ResourceLocation(TowerDefenseUnits.MOD_ID, "textures/entity/units/ultra_effects.png"), false));
 
-            if (ultra <= 10) renderFlash1(pPoseStack, sprite, ultra, pPartialTicks);
+            if (ultra <= 10) renderFlash1(pPoseStack, sprite, pEntity.clientFlashTicks, pPartialTicks);
             renderFlash2(pPoseStack, sprite, pEntity.tickCount, pPartialTicks);
         }
 
@@ -48,8 +48,8 @@ public abstract class AbstractUnitRenderer<T extends AbstractUnit, M extends Ent
 
     @Override
     protected float getWhiteOverlayProgress(T pLivingEntity, float pPartialTicks) {
-        int ultra = pLivingEntity.getFlashTicks();
-        if (ultra > 0) return Mth.clamp((ultra - pPartialTicks) / 10.0F, 0.0F, 1.0F);
+        int flash = pLivingEntity.clientFlashTicks;
+        if (flash > 0) return Mth.clamp(((flash - pPartialTicks) / 10.0F), 0.0F, 1.0F);
         return super.getWhiteOverlayProgress(pLivingEntity, pPartialTicks);
     }
 
@@ -57,13 +57,12 @@ public abstract class AbstractUnitRenderer<T extends AbstractUnit, M extends Ent
         poseStack.pushPose();
         poseStack.translate(0, 1, 0);
         poseStack.mulPose(this.entityRenderDispatcher.cameraOrientation());
-        float age = 1 + ticks + partialTick;
+        float age = Math.max(ticks - partialTick, 0);
 
-        float size = 400.0f;
-        float mult = 100.0f;
-        float calculation = age * mult;
-        poseStack.scale(size / calculation, size / calculation, size / calculation);
-        RenderUtil.drawSprite(poseStack, buffer, 0, ULTRA_SPRITE_SIZE, 0, ULTRA_SPRITE_SIZE + ULTRA_SPRITE_SIZE, ULTRA_SPRITE_SIZE, ULTRA_TEXTURE_WIDTH, ULTRA_TEXTURE_HEIGHT);
+        float size = 2.5f;
+        float calculation = Math.max(size * (age / 15.0F), 0);
+        poseStack.scale(calculation, calculation, calculation);
+        RenderUtil.drawSprite(poseStack, buffer, Mth.clamp(1 - (age / 15.0F), 0, 1), ULTRA_SPRITE_SIZE, 0, ULTRA_SPRITE_SIZE + ULTRA_SPRITE_SIZE, ULTRA_SPRITE_SIZE, ULTRA_TEXTURE_WIDTH, ULTRA_TEXTURE_HEIGHT);
         poseStack.popPose();
     }
 
@@ -73,7 +72,7 @@ public abstract class AbstractUnitRenderer<T extends AbstractUnit, M extends Ent
         float age = ticks + partialTick;
 
         float size = 1.5f;
-        float mult = 10.0f;
+        float mult = 15.0f;
         poseStack.scale(size, size, size);
         poseStack.translate(0, 0, -0.01);
         poseStack.mulPose(Axis.ZP.rotationDegrees(age * mult));

@@ -23,6 +23,7 @@ public class TurretModel<T extends Turret> extends HierarchicalModel<T> {
     private final ModelPart fence;
     private final ModelPart dispenser;
     private final ModelPart shoot;
+    private final ModelPart ultra;
 
     public TurretModel(ModelPart root) {
         this.root = root;
@@ -30,6 +31,7 @@ public class TurretModel<T extends Turret> extends HierarchicalModel<T> {
         this.fence = this.slab.getChild("fence");
         this.dispenser = this.fence.getChild("dispenser");
         this.shoot = this.dispenser.getChild("shoot");
+        this.ultra = this.dispenser.getChild("ultra");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -44,6 +46,8 @@ public class TurretModel<T extends Turret> extends HierarchicalModel<T> {
 
         PartDefinition shoot = dispenser.addOrReplaceChild("shoot", CubeListBuilder.create().texOffs(0, 24).addBox(-8.0F, -16.0F, -8.0F, 16.0F, 16.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
+        PartDefinition ultra = dispenser.addOrReplaceChild("ultra", CubeListBuilder.create().texOffs(0, 56).addBox(-8.0F, -16.0F, -8.0F, 16.0F, 16.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
@@ -54,9 +58,14 @@ public class TurretModel<T extends Turret> extends HierarchicalModel<T> {
 
         this.dispenser.xRot = headPitch * ((float) Math.PI / 180F);
         this.dispenser.yRot = netHeadYaw * ((float) Math.PI / 180F);
-        this.dispenser.y = (Mth.sin(f3 * 5.0F) / 2.0F) + -15.5F;
+        this.dispenser.y += (Mth.sin(f3 * 5.0F) / 2.0F);
 
         this.animate(entity.shootAnimationState, shootAnim, ageInTicks, entity.getAnimationSpeed());
+
+        this.shoot.visible = !entity.isUsingUltra();
+        this.ultra.visible = entity.isUsingUltra();
+        this.ultra.yRot = ageInTicks * 150.0F * ((float) Math.PI / 180F);
+        this.ultra.y += (Mth.sin(f3 * 120.0F));
     }
 
     @Override
